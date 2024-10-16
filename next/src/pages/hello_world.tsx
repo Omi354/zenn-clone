@@ -7,11 +7,11 @@ const HelloWorld: NextPage = () => {
   }
 
   return (
-    <div>
+    <>
       <h1>Title</h1>
       <p>content</p>
       <SimpleButton text={'From HelloWorld'} onClick={handleOnClick} />
-    </div>
+    </>
   )
 }
 
