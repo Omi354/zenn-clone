@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-react": {
+          "runtime": "automatic",
+          "importSource": "@emotion/react"
+        }
+      }
+    ]
+  ],
+  "plugins": ["@emotion/babel-plugin"]
+}
+
+// {
+//   "presets": ["next/babel"], // Babelの基本プリセットは残す
+//   "plugins": ["@emotion/babel-plugin"] // 必要に応じてEmotionのBabelプラグインも残す
+// }
