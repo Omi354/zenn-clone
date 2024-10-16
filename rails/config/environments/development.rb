@@ -64,4 +64,5 @@ Rails.application.configure do
   # 認証メール送信に関する設定
   config.action_mailer.default_options = { from: "no-replay@example.com" }
   config.action_mailer.default_url_options = { host: "localhost:3000" }
+  config.action_mailer.delivery_method = :letter_opener_web
 end
