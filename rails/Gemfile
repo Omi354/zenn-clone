@@ -45,5 +45,5 @@ group :development, :test do
   gem "rubocop-rspec"
 
   # メール送信テスト用
-  gem 'letter_opener_web'
+  gem "letter_opener_web"
 end
