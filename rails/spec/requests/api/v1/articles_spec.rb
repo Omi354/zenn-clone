@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "Api::V1::Articles", type: :request do
   describe "GET /api/v1/articles" do
@@ -27,7 +27,7 @@ RSpec.describe "Api::V1::Articles", type: :request do
     end
 
     context "pageをparamsで送信した時" do
-      let(:params) { {page: 2} }
+      let(:params) { { page: 2 } }
 
       it "該当ページ目のレコード10件が取得できる" do
         subject
@@ -46,6 +46,7 @@ RSpec.describe "Api::V1::Articles", type: :request do
 
   describe "GET /api/v1/articles/:id" do
     subject { get(api_v1_article_path(article_id)) }
+
     let(:article) { create(:article, status:) }
 
     context "article_idに対応するarticlesレコードが存在する時" do
@@ -72,6 +73,7 @@ RSpec.describe "Api::V1::Articles", type: :request do
         end
       end
     end
+
     context "article_idに対応するarticlesレコードが存在しない時" do
       let(:article_id) { 10_000_000_000 }
       it "ActiveRecord::RecordNotFound エラーが返る" do
@@ -81,5 +83,3 @@ RSpec.describe "Api::V1::Articles", type: :request do
     end
   end
 end
-
-

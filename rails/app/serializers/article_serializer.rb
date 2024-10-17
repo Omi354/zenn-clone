@@ -1,7 +1,7 @@
 class ArticleSerializer < ActiveModel::Serializer
   attributes :id, :title, :content, :created_at, :from_today
-  belongs_to :user, serializer:UserSerializer
-  
+  belongs_to :user, serializer: UserSerializer
+
   def created_at
     object.created_at.strftime("%Y/%m/%d")
   end
@@ -20,14 +20,13 @@ class ArticleSerializer < ActiveModel::Serializer
 
     days = seconds / (60 * 60 * 24)
     return "#{days}日前" if days.positive?
-    
+
     hours = seconds / (60 * 60)
     return "#{hours}時間前" if hours.positive?
-    
+
     minutes = seconds / 60
     return "#{minutes}分前" if minutes.positive?
 
     "#{seconds}秒前"
   end
-
 end
