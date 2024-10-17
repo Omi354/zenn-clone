@@ -48,4 +48,10 @@ group :development, :test do
 
   # メール送信テスト用
   gem "letter_opener_web"
+
+  # テスト用データを作成する
+  gem "factory_bot_rails"
+
+  # ダミーデータの生成
+  gem 'faker'
 end
