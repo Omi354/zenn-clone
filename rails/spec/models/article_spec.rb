@@ -1,17 +1,16 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Article, type: :model do
   context "factoryのデフォルト設定に従った場合" do
     it "正常にレコードを新規作成できる" do
-
-      expect {create(:article)}.to change { Article.count }.by(1)
+      expect { create(:article) }.to change { Article.count }.by(1)
     end
   end
 
   describe "Validations" do
     subject { article.valid? }
 
-    let(:article) { build(:article, title:, content:, status:, user:)}
+    let(:article) { build(:article, title:, content:, status:, user:) }
     let(:title) { Faker::Lorem.sentence }
     let(:content) { Faker::Lorem.paragraph }
     let(:status) { :published }
@@ -43,13 +42,11 @@ RSpec.describe Article, type: :model do
 
     context "ステータスが未保存かつ、すでに同一ユーザーが未保存のステータスの記事を所有していた時" do
       let(:status) { :unsaved }
-      before { create(:article, status: :unsaved, user:)}
+      before { create(:article, status: :unsaved, user:) }
 
       it "例外が発生する" do
         expect { subject }.to raise_error(StandardError)
       end
     end
-
   end
-
 end
