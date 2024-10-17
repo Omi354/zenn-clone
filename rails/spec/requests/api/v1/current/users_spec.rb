@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "Api::V1::Current::Users", type: :request do
   describe "GET api/vi/current/user" do
@@ -27,6 +27,3 @@ RSpec.describe "Api::V1::Current::Users", type: :request do
     end
   end
 end
-
-# uid,tokenとかがあれば認証できる
-# 認証されていれば、showにGetりくえすとを送るとjsonが帰って来る

@@ -53,5 +53,5 @@ group :development, :test do
   gem "factory_bot_rails"
 
   # ダミーデータの生成
-  gem 'faker'
+  gem "faker"
 end
