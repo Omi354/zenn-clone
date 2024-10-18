@@ -31,8 +31,6 @@ RSpec.describe "Api::V1::Current::Articles", type: :request do
         expect(response).to have_http_status(:ok)
       end
     end
-
-
   end
 
   describe "GET /api/v1/current/articles/:id" do
@@ -63,11 +61,8 @@ RSpec.describe "Api::V1::Current::Articles", type: :request do
         subject
         expect(response).to have_http_status(404)
       end
-
     end
-
   end
-
 
   describe "POST /api/v1/current/articles" do
     subject { post(api_v1_current_articles_path, headers:) }
