@@ -6,7 +6,6 @@ class Api::V1::Current::ArticlesController < Api::V1::BaseController
     render json: unsaved_article
   end
 
-  # すでに空の記事をcreate済なのでupdateをかける、jsonはrederしてもしなくてもいいけどすることにルウ
   def update
     article = current_user.articles.find(params[:id])
     if article.update!(article_params)
