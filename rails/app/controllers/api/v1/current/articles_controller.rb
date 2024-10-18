@@ -12,12 +12,11 @@ class Api::V1::Current::ArticlesController < Api::V1::BaseController
       render json: article
 
     end
-
   end
 
   private
-  def article_params
-    params.require(:article).permit(:title, :content, :status)
-  end
 
+    def article_params
+      params.require(:article).permit(:title, :content, :status)
+    end
 end
