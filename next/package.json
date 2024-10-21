@@ -25,6 +25,7 @@
     "next": "^14.2.15",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.46.0",
     "axios": "^1.5.0",
     "camelcase-keys": "^9.0.0",
     "marked": "^8.0.0",
